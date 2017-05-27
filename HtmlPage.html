@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -9,13 +9,13 @@
     <script src="js/lib/jquery.cloud9carousel.js"></script>
     <script src="js/social.js"></script>
     <style>
-        #showcase { height: 460px; margin:0 auto; }        
+        #showcase { width:100%; height: 460px; margin:0 auto; }        
         #nav { text-align: center; }      
     </style>
     <script>
         $(function () {
             $("#showcase").css("display", "none").Cloud9Carousel({
-                mirror: { gap: 12, height: 0.2 },
+                //mirror: { gap: 12, height: 0.2 },
                 autoPlay: 1,
                 autoPlayDelay: 2000,
                 onRendered: function (carousel) {
