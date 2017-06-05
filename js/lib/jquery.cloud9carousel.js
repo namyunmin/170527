@@ -163,7 +163,7 @@
       var item = this.items[itemIndex];
       var sin = Math.sin(rotation);
       var farScale = this.farScale;
-      var scale = farScale + ((1-farScale) * (sin+1) * 0.5);
+      var scale = farScale + ((1-farScale) * (sin+1) * 0.3);
 
       item.moveTo(
         this.xOrigin + (scale * ((Math.cos(rotation) * this.xRadius) - (item.fullWidth * 0.5))),
