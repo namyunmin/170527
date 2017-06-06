@@ -22,27 +22,45 @@
         $(function () {
             var banner = "";
             var arr = random();
-
-            //console.log(arr);
-
+            
+            //링크
             for (var i = 0; i < arr.length; i++) {
-                banner += "<img class=\"cloud9-item\" src=\"images/logo" + arr[i] + ".png\" alt=\"logo" + arr[i] + "\" />";
+                banner += "<a href=\"#\" class=\"logo_link\" id=\"link_" + arr[i] + "\"><img class=\"cloud9-item\" src=\"images/logo" + arr[i] + ".png\" alt=\"logo" + arr[i] + "\" /></a>";
             }
                
             $("#showcase").html(banner).promise().done(function () {
                 $("#showcase").css("display", "none").Cloud9Carousel({
-                    yOrigin: 500,
+                    yOrigin: 450, //로고 높이 조절 
                     xOrigin: 470,
                     yRadius: -300,
                     xRadius: 500,
-                    farScale: 0.4,
-                    //mirror: { gap: 12, height: 0.2 },
+                    farScale: 0.4,                    
                     autoPlay: 1,
                     autoPlayDelay: 2000,
                     onRendered: function (carousel) {
                     },
                     onLoaded: function (carousel) {
                         $("#showcase").css("display", "inline");
+
+                        //배너 링크
+                        $("a.logo_link").click(function () {                            
+                            if ($(this).attr("id") == "link_1") {
+                                //1번배너
+                                location.href = "";
+                            }
+                            else if ($(this).attr("id") == "link_2") {
+                                //2번배너
+                                location.href = "";
+                            }
+                            else if ($(this).attr("id") == "link_3") {
+                                //3번배너
+                                location.href = "";
+                            }
+                            else if ($(this).attr("id") == "link_4") {
+                                //4번배너
+                                location.href = "";
+                            }
+                        });
                     }
                 });
             });      
@@ -73,9 +91,7 @@
     <div class="wrap">
         <div class="building"></div>
         <div class="banner_area">
-            <div id="showcase">
-                
-            </div>
+            <div id="showcase"></div>
         </div>
     </div>    
 </body>
